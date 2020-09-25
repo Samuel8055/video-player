@@ -1,38 +1,128 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #000;
+  --grey: #141414;
+  --light-grey: #3b3b3b;
+  --white: #c4c4c4;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--grey);
+}
+
+/* ------------ Form ------------- */
+
+.form {
+  margin: 0 auto;
+}
+
+.input-field {
+  border: 1px solid var(--grey);
+  border-bottom: 2px solid var(--light-grey);
+  background-color: var(--grey);
+  margin: 15px 0;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  outline: none;
+  color: #fff;
+  background-color: var(--grey) !important;
+  box-shadow: none;
+  border: none;
+  border-bottom: 3px solid var(--light-grey);
+}
+
+/* -------------- Playlist ------------- */
+
+.playlist-section {
+  background-color: var(--grey);
+  padding: 10px !important;
+  width: 450px;
+  font-size: 14px;
+  border-top: 2px solid #101010;
+}
+
+.playlist-header {
+  text-transform: uppercase;
   text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--light-grey);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.playlist-video {
+  margin: 10px 0;
+  padding: 5px;
+  transition: all 0.5s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.playlist-video:hover {
+  background-color: var(--black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.playlist-link {
+  cursor: pointer;
+}
+
+.link-text {
+  font-weight: bold;
+  color: #888;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+/* ------------ Video Section ------------ */
+
+.video-section {
+  background-color: var(--black);
+  width: 100%;
+}
+
+.video-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.video-player {
+  width: 100% !important;
+  height: 80vh !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* ---------------- Media Queries ---------------- */
+
+@media (max-width: 500px) {
+  .video-container {
+    display: block;
   }
 }
